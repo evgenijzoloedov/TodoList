@@ -63,9 +63,7 @@ body{
     margin: 20px 0;
     font-size: 25px;
 }
-.tasks,.tasks__done{
-    /* margin:10px 0; */
-}
+
 .number_done,.number_todo{
 
     padding: 5px 14px;
@@ -73,6 +71,9 @@ body{
     
     border:2px solid black;
     
+}
+.tasks__done{
+    opacity:0.7
 }
 
 .line{
