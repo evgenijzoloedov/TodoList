@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: 'Roboto';
+    src:url(./шрифты/Roboto-Black.ttf);
+    src:url(./шрифты/Roboto-Medium.ttf)
+}
+body{
+    font-family:'Roboto',Sans-serif,Arial;
+}
+
+.header{
+    width: 100%;
+    background: red;
+    
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container{
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header__logo{
+    font-size: 30px;
+    font-weight: 700;
+    
+    padding: 20px 0;
+}
+.form .inputtext{
+    padding:10px;
+    margin-right: 15px;
+    width: 250px;
+    font-family: inherit;
+    
+}
+.addNewTask{
+
+    background: blue;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size:14px;
+    box-sizing: border-box;
+    outline: none;
+}
+.container__wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.toDo,.done,.tasks,.tasks__done.tasks__todo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 20px 0;
+    font-size: 25px;
+}
+.tasks,.tasks__done{
+    /* margin:10px 0; */
+}
+.number_done,.number_todo{
+
+    padding: 5px 14px;
+    border-radius: 50%;
+    
+    border:2px solid black;
+    
+}
+
+.line{
+    height: 2px;
+    background-color: black;
+    width: 100%;
+}
+.title{
+    margin-left:10px
+}
+.remove{
+    padding: 10px 15px;
+    background: rgb(43, 37, 37);
+    color: white;
+    text-transform: uppercase;
+}
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked){
+   position: absolute;
+   z-index: 1;
+   opacity: 0;
+   width: 20px;
+   height: 20px;
+   margin-top: 6px;
+}
+input[type="checkbox"]:checked + span,
+input[type="checkbox"]:not(:checked) + span{
+   position: relative;
+   padding-left: 35px;
+   cursor:pointer;
+}
+input[type="checkbox"]:checked + span::before{
+   content:'';
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   left:0;
+   top:calc(50% - 10px);
+   background-color: transparent;
+   border-radius: 2px;
+   border: 2px solid #4fc1de;
+}
+input[type="checkbox"]:checked + span::after{
+   content:'';
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   transition: all .2s ease;
+   opacity: 1;
+   left: 4px;
+   top: calc(50% - 6px);
+   background-color: #4fc1de;
+}
+input[type="checkbox"]:not(:checked) + span::before{
+   content:'';
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   left:0;
+   top:calc(50% - 10px);
+   background-color: transparent;
+   border-radius: 2px;
+   border: 2px solid #5d575f;
+}
+input[type="checkbox"]:not(:checked) + span::after{
+   content:'';
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   transition: all .2s ease;
+   opacity: 0;
+   left: 4px;
+   top: calc(50% - 6px);
+   background-color: #7d25a9;
+}
+input[type="checkbox"] + span {
+    padding-left: 10px;
+}
