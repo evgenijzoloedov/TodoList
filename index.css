@@ -22,37 +22,36 @@ body{
 }
 
 .header{
+    /* max-width:100vw; */
+    /* display: flex; */
     width: 100%;
-    background: red;
     
-    display: flex;
+    background: yellow;
+    
+    
     align-items: center;
     margin-bottom: 20px;
 }
 .container{
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 .header__logo{
     font-size: 30px;
     font-weight: 700;
-    
     padding: 20px 0;
 }
 .form .inputtext{
     padding:10px;
     margin-right: 15px;
-    width: 250px;
+    max-width: 250px;
     font-family: inherit;
-    
 }
 .addNewTask{
-
-    background: blue;
+    background: black;
     padding: 10px;
     text-transform: uppercase;
     color: white;
@@ -161,3 +160,30 @@ input[type="checkbox"]:not(:checked) + span::after{
 input[type="checkbox"] + span {
     padding-left: 10px;
 }
+
+
+@media (max-width: 455px){
+    .header, .container, .form{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .form>input,.form>button{
+        margin-bottom: 15px;
+        width: 190px;
+
+    }
+ }
+/* @media all and(width:455px){
+    .header{
+        display:flex;
+        flex-direction: column;
+    }
+    .container{
+        
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+} */
